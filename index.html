@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahruz Mammadly | Dev</title>
+    <style>
+        /* 1. Ümumi Dizayn və Reset */
+        :root {
+            --bg-color: #0b0c10;       /* Dərin Qara */
+            --text-color: #c5c6c7;     /* Açıq Boz */
+            --accent-color: #66fcf1;   /* Neon Mavi/Turkuaz (Cyberpunk stili) */
+            --secondary-bg: #1f2833;
+            --font-main: 'Courier New', Courier, monospace; /* Proqramçı şrifti */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            overflow-x: hidden; /* Sağ-sol sürüşməni bağlayır */
+        }
+
+        /* 2. Loading Ekranı (İlk açılan) */
+        #loader-screen {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader-text {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .cursor {
+            animation: blink 1s infinite;
+        }
+
+        /* 3. Əsas Səhifə (Main Content) */
+        #main-content {
+            display: none; /* İlk başda gizlidir */
+            opacity: 0;
+            transition: opacity 1s ease-in;
+            min-height: 100vh;
+            position: relative;
+            padding: 2rem;
+            display: flex; /* Flexbox düzəlişi */
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* Naviqasiya */
+        nav {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--accent-color); }
+
+        /* Mərkəzi Hissə */
+        .hero-container {
+            margin-left: 10%; /* Soldan boşluq */
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Şəkildəki o Şaquli Xətt */
+        .decoration-line {
+            position: absolute;
+            left: 5%;
+            top: 20%;
+            bottom: 20%;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, var(--accent-color), transparent);
+            opacity: 0.5;
+        }
+
+        .decoration-line::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: -4px;
+            width: 9px;
+            height: 9px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-color);
+        }
+
+        h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        h1 span { color: var(--accent-color); }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            max-width: 500px;
+            color: #8892b0;
+        }
+
+        .btn-group { margin-top: 2rem; }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            text-decoration: none;
+            margin-right: 15px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: rgba(102, 252, 241, 0.1);
+        }
+
+        /* 4. Responsive (Mobil Uyğunluq) */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            
+            nav {
+                position: static;
+                justify-content: center;
+                margin-bottom: 40px;
+                margin-top: 20px;
+            }
+
+            .hero-container { margin-left: 5%; }
+            
+            .decoration-line { display: none; /* Mobildə xətti gizlət, qarışıqlıq olmasın */ }
+            
+            #main-content {
+                display: block; /* Flex-i ləğv et */
+                padding-top: 20px;
+            }
+        }
+
+        /* Animasiyalar */
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    </style>
+</head>
+<body>
+
+    <div id="loader-screen">
+        <div class="loader-text">
+            > System.loading()<span class="cursor">_</span>
+        </div>
+    </div>
+
+    <div id="main-content">
+        
+        <div class="decoration-line"></div>
+
+        <nav>
+            <a href="#">.home()</a>
+            <a href="#">.projects()</a>
+            <a href="#">.blog()</a>
+            <a href="mailto:email@example.com">.contact()</a>
+        </nav>
+
+        <div class="hero-container">
+            <p style="color: var(--accent-color); margin-bottom: 10px;">Hi, my name is</p>
+            <h1>Bahruz<br>Mammadly<span>.dev()</span></h1>
+            <p class="subtitle">
+                I build things for the web. <br>
+                Creative Developer & Tech Enthusiast based in Azerbaijan.
+            </p>
+            
+            <div class="btn-group">
+                <a href="#" class="btn">Check my work</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Səhifə yüklənəndə bu skript işə düşür
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader-screen');
+            const content = document.getElementById('main-content');
+
+            // 2.5 saniyəlik süni gecikmə (animasiyanı görmək üçün)
+            setTimeout(() => {
+                loader.style.opacity = '0'; // Loaderi şəffaflaşdır
+                
+                // Animasiya bitəndən sonra loaderi tamamilə yox et və saytı göstər
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    content.style.display = 'flex'; // Saytı aç
+                    
+                    // Qısa bir gecikmədən sonra opacity-ni 1 elə ki, yavaşca görünsün
+                    setTimeout(() => {
+                        content.style.opacity = '1';
+                    }, 50);
+                }, 500); 
+
+            }, 2500); // 2500 milliyasinə = 2.5 saniyə
+        });
+    </script>
+
+</body>
+</html>
