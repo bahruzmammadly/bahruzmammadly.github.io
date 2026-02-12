@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bahruz Mammadly — Front-End Developer</title>
+<meta name="description" content="Bahruz Mammadly is a Front-End Developer focused on mobile-first and modern web interfaces.">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0f1117;
+  --card:#161b22;
+  --text:#ffffff;
+  --muted:#9aa4b2;
+  --accent:#5eead4;
+  --border:rgba(255,255,255,0.08);
+  --radius:12px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:0 20px;
+}
+
+/* HEADER */
+
+header{
+  padding:24px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-weight:600;
+  color:var(--accent);
+  text-decoration:none;
+  font-size:16px;
+}
+
+.desktop-nav{
+  display:none;
+}
+
+.desktop-nav a{
+  margin-left:24px;
+  text-decoration:none;
+  color:var(--muted);
+  font-size:14px;
+  transition:.2s;
+}
+
+.desktop-nav a:hover{
+  color:var(--accent);
+}
+
+/* HERO */
+
+.hero{
+  padding:90px 0 80px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:clamp(32px,8vw,52px);
+  font-weight:800;
+  margin-bottom:18px;
+}
+
+.hero p{
+  max-width:560px;
+  margin:0 auto 36px;
+  color:var(--muted);
+  font-size:17px;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:12px 22px;
+  border-radius:var(--radius);
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  border:1px solid var(--border);
+  color:var(--text);
+  transition:.2s ease;
+}
+
+.btn.primary{
+  background:var(--accent);
+  color:#000;
+  border:none;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+  opacity:.9;
+}
+
+/* PROJECTS */
+
+.section{
+  padding:80px 0;
+}
+
+.section h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:26px;
+}
+
+.projects{
+  display:grid;
+  gap:20px;
+}
+
+.card{
+  background:var(--card);
+  padding:24px;
+  border-radius:var(--radius);
+  border:1px solid var(--border);
+  transition:.2s;
+}
+
+.card:hover{
+  border-color:var(--accent);
+}
+
+.card h3{
+  margin-bottom:10px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* FOOTER */
+
+footer{
+  padding:50px 0 100px;
+  text-align:center;
+  font-size:14px;
+  color:var(--muted);
+  border-top:1px solid var(--border);
+  margin-top:60px;
+}
+
+/* MOBILE FLOAT NAV */
+
+.float-nav{
+  position:fixed;
+  bottom:18px;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:50px;
+  padding:8px 14px;
+  display:flex;
+  gap:18px;
+  z-index:1000;
+}
+
+.float-nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  transition:.2s;
+}
+
+.float-nav a.active{
+  color:var(--accent);
+}
+
+.float-nav a:hover{
+  color:var(--accent);
+}
+
+/* SHOW DESKTOP NAV ON LARGER SCREENS */
+
+@media(min-width:768px){
+  .desktop-nav{
+    display:block;
+  }
+  .float-nav{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+  <a href="#" class="logo">bahruz.dev</a>
+  <nav class="desktop-nav">
+    <a href="#projects">Projects</a>
+    <a href="https://github.com/bahruzmammadly" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/bahruzmammadly" target="_blank">LinkedIn</a>
+    <a href="mailto:bahruzmammadly@gmail.com">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Bahruz Mammadly</h1>
+  <p>
+    Front-End Developer specializing in mobile-first and modern web interfaces.
+    I build clean, user-focused, and high-performance digital experiences.
+  </p>
+
+  <div class="buttons">
+    <a href="/Bahruz-Mammadly-CV.pdf" download class="btn primary">Download CV</a>
+    <a href="mailto:bahruzmammadly@gmail.com" class="btn">Contact</a>
+  </div>
+</section>
+
+<section id="projects" class="section">
+  <h2>Selected Projects</h2>
+
+  <div class="projects">
+
+    <div class="card">
+      <h3>Responsive Landing Page</h3>
+      <p>Mobile-first landing page built with semantic HTML and modern CSS.</p>
+    </div>
+
+    <div class="card">
+      <h3>UI Component System</h3>
+      <p>Reusable interface components focused on consistency and usability.</p>
+    </div>
+
+    <div class="card">
+      <h3>Developer Portfolio</h3>
+      <p>Minimal portfolio website designed for performance and clarity.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  © 2026 Bahruz Mammadly. All rights reserved.
+</footer>
+
+</div>
+
+<!-- MOBILE FLOAT NAV -->
+<nav class="float-nav">
+  <a href="#" class="active">Home</a>
+  <a href="#projects">Projects</a>
+  <a href="mailto:bahruzmammadly@gmail.com">Contact</a>
+</nav>
+
+<script>
+const navLinks = document.querySelectorAll('.float-nav a');
+
+navLinks.forEach(link=>{
+  link.addEventListener('click',()=>{
+    navLinks.forEach(l=>l.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>
