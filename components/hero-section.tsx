@@ -5,23 +5,6 @@ export function HeroSection() {
       className="relative flex h-screen w-full items-center"
       aria-labelledby="hero-heading"
     >
-      {/* Left teal sidebar (desktop only) */}
-      <div
-        className="fixed left-0 top-0 z-30 hidden h-full flex-col lg:flex"
-        aria-hidden="true"
-      >
-        <div className="mt-[72px] flex h-[88px] w-[38px] items-center justify-center bg-accent">
-          <span className="font-mono text-sm font-bold text-accent-foreground">
-            m.
-          </span>
-        </div>
-        <div className="flex h-[56px] w-[38px] items-center justify-center bg-accent/25">
-          <span className="-rotate-90 whitespace-nowrap font-mono text-[9px] uppercase tracking-[0.2em] text-accent/80">
-            Home
-          </span>
-        </div>
-      </div>
-
       {/* Main content */}
       <div className="relative z-10 px-6 sm:px-10 md:px-16 lg:pl-28 xl:pl-36">
         <div className="relative pl-6 md:pl-8">
@@ -50,9 +33,9 @@ export function HeroSection() {
 
           {/* Role description */}
           <p className="mt-2 max-w-md font-mono text-xs leading-relaxed text-muted-foreground sm:text-sm md:mt-3 md:text-base">
-            {'Front end & mobile developer,'}
+            {"Front end & mobile developer,"}
             <br />
-            {'crafting modern digital experiences.'}
+            {"crafting modern digital experiences."}
           </p>
         </div>
       </div>

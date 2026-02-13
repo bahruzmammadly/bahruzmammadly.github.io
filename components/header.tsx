@@ -149,10 +149,7 @@ export function Header() {
               onClick={() => setMenuOpen(false)}
               tabIndex={menuOpen ? 0 : -1}
             >
-              <i
-                className="fa-brands fa-github text-3xl"
-                aria-hidden="true"
-              />
+              <i className="fa-brands fa-github text-3xl" aria-hidden="true" />
             </a>
           </div>
         </nav>
