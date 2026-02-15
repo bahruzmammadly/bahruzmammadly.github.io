@@ -27,15 +27,16 @@ export function Header() {
           className="hidden items-center gap-6 md:flex"
           aria-label="Main navigation"
         >
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="font-mono text-xs tracking-tight text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.length > 0 &&
+            navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="font-mono text-xs tracking-tight text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.label}
+              </a>
+            ))}
           <a
             href="https://linkedin.com/in/bahruzmammadly"
             target="_blank"
@@ -114,17 +115,18 @@ export function Header() {
           className="flex flex-1 flex-col items-end justify-end gap-2 px-6 pb-8"
           aria-label="Mobile navigation"
         >
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="font-mono text-5xl font-bold text-muted-foreground/40 transition-colors hover:text-foreground"
-              onClick={() => setMenuOpen(false)}
-              tabIndex={menuOpen ? 0 : -1}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.length > 0 &&
+            navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="font-mono text-5xl font-bold text-muted-foreground/40 transition-colors hover:text-foreground"
+                onClick={() => setMenuOpen(false)}
+                tabIndex={menuOpen ? 0 : -1}
+              >
+                {link.label}
+              </a>
+            ))}
           <div className="mt-4 flex items-center gap-6">
             <a
               href="https://linkedin.com/in/bahruzmammadly"
