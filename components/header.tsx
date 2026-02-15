@@ -15,7 +15,7 @@ export function Header() {
       <div className="flex items-center justify-between px-5 py-4 md:px-8 md:py-5">
         {/* Logo - left */}
         <a
-          href="#"
+          href="/"
           className="font-mono text-sm tracking-tight text-primary transition-colors hover:text-primary/80"
           aria-label="Bahruz Mammadly - Home"
         >
