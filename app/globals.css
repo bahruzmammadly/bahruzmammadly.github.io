@@ -13,9 +13,9 @@
     --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
     --secondary: 230 14% 16%;
-    --secondary-foreground: 0 0% 80%;
+    --secondary-foreground: 0 0% 90%; /* daha açıq */
     --muted: 230 10% 20%;
-    --muted-foreground: 230 6% 46%;
+    --muted-foreground: 0 0% 85%;     /* daha açıq */
     --accent: 172 40% 52%;
     --accent-foreground: 230 18% 11%;
     --destructive: 0 84% 60%;
