@@ -59,7 +59,7 @@ export function Header() {
             <i className="fa-brands fa-linkedin text-base" aria-hidden="true" />
           </a>
           <a
-            href="https://bsky.app/profile/bahruzmammadly.bsky.social"
+            href="https://bahruzmammadly.bsky.app/profile/bahruzmammadly.bsky.social"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Bluesky profile of Bahruz Mammadly"
@@ -161,7 +161,7 @@ export function Header() {
               <i className="fa-brands fa-linkedin text-3xl leading-none" aria-hidden="true" />
             </a>
             <a
-              href="https://bsky.app/profile/bahruzmammadly.bsky.social"
+              href="https://bahruzmammadly.bsky.app/profile/bahruzmammadly.bsky.social"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Bluesky"
