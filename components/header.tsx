@@ -154,21 +154,18 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-primary transition-colors hover:text-primary/80"
+              className="flex h-8 w-8 items-center justify-center text-primary transition-colors hover:text-primary/80"
               onClick={() => setMenuOpen(false)}
               tabIndex={menuOpen ? 0 : -1}
             >
-              <i
-                className="fa-brands fa-linkedin text-3xl"
-                aria-hidden="true"
-              />
+              <i className="fa-brands fa-linkedin text-3xl leading-none" aria-hidden="true" />
             </a>
             <a
               href="https://bsky.app/profile/bahruzmammadly.bsky.social"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Bluesky"
-              className="text-primary transition-colors hover:text-primary/80"
+              className="flex h-8 w-8 items-center justify-center text-primary transition-colors hover:text-primary/80"
               onClick={() => setMenuOpen(false)}
               tabIndex={menuOpen ? 0 : -1}
             >
@@ -179,15 +176,15 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="text-primary transition-colors hover:text-primary/80"
+              className="flex h-8 w-8 items-center justify-center text-primary transition-colors hover:text-primary/80"
               onClick={() => setMenuOpen(false)}
               tabIndex={menuOpen ? 0 : -1}
             >
-              <i className="fa-brands fa-github text-3xl" aria-hidden="true" />
+              <i className="fa-brands fa-github text-3xl leading-none" aria-hidden="true" />
             </a>
           </div>
         </nav>
       </div>
     </header>
   );
-}
+            }
