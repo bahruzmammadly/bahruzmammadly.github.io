@@ -47,6 +47,15 @@ export function Header() {
             <i className="fa-brands fa-linkedin text-base" aria-hidden="true" />
           </a>
           <a
+            href="https://bsky.app/profile/bahruzmammadly.bsky.social"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Bluesky profile of Bahruz Mammadly"
+            className="text-muted-foreground transition-colors hover:text-primary"
+          >
+            <i className="fa-brands fa-bluesky text-base" aria-hidden="true" />
+          </a>
+          <a
             href="https://github.com/bahruzmammadly"
             target="_blank"
             rel="noopener noreferrer"
@@ -139,6 +148,20 @@ export function Header() {
             >
               <i
                 className="fa-brands fa-linkedin text-3xl"
+                aria-hidden="true"
+              />
+            </a>
+            <a
+              href="https://bsky.app/profile/bahruzmammadly.bsky.social"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Bluesky"
+              className="text-primary transition-colors hover:text-primary/80"
+              onClick={() => setMenuOpen(false)}
+              tabIndex={menuOpen ? 0 : -1}
+            >
+              <i
+                className="fa-brands fa-bluesky text-3xl"
                 aria-hidden="true"
               />
             </a>
